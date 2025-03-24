@@ -1,0 +1,181 @@
+body {
+    background-image: linear-gradient(180deg, #0034AD, #040451);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cliente-info-container {
+    padding: 2rem;
+    width: 90%;
+    margin: 2rem auto;
+    border-radius: 15px;
+    min-width: 80vw;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.title {
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Isidora', sans-serif;
+    margin-bottom: 2rem;
+}
+
+.info-content {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.left-column, .right-column {
+    flex: 1;
+    min-width: 45%;
+}
+
+.subtitle {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.info-group {
+    margin-bottom: 1.5rem;
+}
+
+.info-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.info-label {
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-value {
+    color: #ffffff;
+    background-color: #f27527;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.scroll-container {
+    max-height: 350px;
+    overflow-y: auto;
+    padding-right: 10px;
+    margin-bottom: -20px;
+}
+
+.contatos-list {
+    padding-right: 0.5rem;
+}
+
+.contato-card {
+    border: 2px solid #eee;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.delete-contato-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: none;
+    border: none;
+    color: #ff4444;
+    cursor: pointer;
+}
+
+.contato-valor {
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #f27527;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.contato-label {
+    color: #ffffff;
+}
+
+.contato-observacao {
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-retornar, .btn-editar, .btn-excluir {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-retornar {
+    background-color: #ddd;
+    color: #0034AD;
+}
+
+.btn-editar {
+    background-color: #f27527;
+    color: white;
+}
+
+.btn-excluir {
+    background-color: #ff4444;
+    color: white;
+}
+
+.btn-retornar:hover, .btn-editar:hover, .btn-excluir:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Customização da scrollbar */
+.scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background: #f27527;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .info-content {
+        flex-direction: column;
+    }
+
+    .left-column, .right-column {
+        min-width: 100%;
+    }
+}

@@ -1,0 +1,226 @@
+body {
+    background-image: linear-gradient(180deg, #0034AD, #040451);
+}
+
+.cliente-form-container {
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.title {
+    font-family: 'Isidora', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 5px;
+    white-space: pre-line;
+    line-height: 0.9;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background-color: #F27527; 
+    color: #ffffff; 
+    width: 100%;
+    padding: 10px; 
+    border: none; 
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Isidora';
+    outline: none; 
+    caret-color: #ffffff; 
+}
+
+.form-group ::placeholder {
+    color: #ffffff; 
+    opacity: 0.5; 
+}
+
+.form-group input:not(:placeholder-shown),
+.form-group textarea:not(:placeholder-shown) {
+    font-weight: 700; 
+}
+
+.form-group input[type="date"]:invalid {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+}
+
+.form-group input[type="date"]:valid {
+    color: #ffffff; 
+    font-weight: 700; 
+}
+
+.form-group select:invalid {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+}
+
+.form-group select:valid {
+    color: #ffffff; 
+    font-weight: 700; 
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none; 
+    box-shadow: none; 
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    color: #ffffff; 
+}
+
+.form-group input::selection,
+.form-group select::selection,
+.form-group textarea::selection {
+    background-color: #ffffff;
+    color: #F27527; 
+}
+
+body {
+    caret-color: transparent; 
+}
+
+.form-group input:-webkit-autofill,
+.form-group input:-webkit-autofill:hover,
+.form-group input:-webkit-autofill:focus,
+.form-group input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #F27527 inset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.form-group select:-webkit-autofill,
+.form-group select:-webkit-autofill:hover,
+.form-group select:-webkit-autofill:focus,
+.form-group select:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #F27527 inset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.form-group textarea:-webkit-autofill,
+.form-group textarea:-webkit-autofill:hover,
+.form-group textarea:-webkit-autofill:focus,
+.form-group textarea:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #F27527 inset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.form-row {
+    display: flex;
+    gap: 40px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.contato-group {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.add-contato-button {
+    background-color: #ffffff;
+    color: #F27527;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    min-width: 100%;
+}
+
+.add-contato-button:hover {
+    background-color: #F27527;
+    color: #ffffff;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.cancel-button,
+.save-button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.cancel-button {
+    background-color: transparent;
+    color: #F27527;
+}
+
+.cancel-button:hover {
+    color: #f8a16b;
+}
+
+.save-button {
+    background-color: #F27527;
+    font-weight: 700;
+    color: white;
+}
+
+.save-button:hover {
+    background-color: #f8a16b;
+}
+
+.error-message {
+    color: #ff0000;
+    font-size: 0.875rem;
+    margin-top: 5px;
+    text-align: left;
+    font-weight: bold;
+}
