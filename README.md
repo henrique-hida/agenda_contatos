@@ -65,7 +65,7 @@ psql -U seu_usuario -d agenda_contatos -f scripts/init.sql
 ### 2. Executando o Backend
 1. Navegue até a pasta do backend:
    ```sh
-   cd backend
+   cd backend/agenda
    ```
 2. Configure o `application.properties` com suas credenciais do banco de dados.
 3. Compile e inicie o servidor:
