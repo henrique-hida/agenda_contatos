@@ -18,14 +18,11 @@ public class ClienteService {
     @Autowired
     private ContatoRepository contatoRepository;
 
-    // Cadastrar um cliente
     public Cliente cadastrarCliente(Cliente cliente) {
-        // Validações (ex: CPF único)
         if (clienteRepository.findByCpf(cliente.getCpf()).isPresent()) {
             throw new RuntimeException("CPF já cadastrado!");
         }
 
-        // Associa os contatos ao cliente antes de salvar
         if (cliente.getContatos() != null) {
             cliente.getContatos().forEach(contato -> contato.setCliente(cliente));
         }

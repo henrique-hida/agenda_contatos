@@ -17,7 +17,7 @@ public class Contato {
 
     @ManyToOne
     @JoinColumn(name = "cliente_id")
-    @JsonBackReference // Impede que Contato serialize Cliente recursivamente
+    @JsonBackReference
     @ToString.Exclude
     private Cliente cliente;
 }

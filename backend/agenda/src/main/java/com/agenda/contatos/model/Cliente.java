@@ -19,7 +19,7 @@ public class Cliente {
     private String endereco;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
-    @JsonManagedReference // Garante que Cliente pode serializar contatos
+    @JsonManagedReference
     @ToString.Exclude
     private List<Contato> contatos;
 }
