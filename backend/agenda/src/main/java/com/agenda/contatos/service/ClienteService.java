@@ -34,15 +34,20 @@ public class ClienteService {
         Cliente clienteExistente = clienteRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Cliente não encontrado!"));
 
+        if (!clienteExistente.getCpf().equals(clienteAtualizado.getCpf())) {
+            if (clienteRepository.findByCpf(clienteAtualizado.getCpf())
+                    .filter(c -> !c.getId().equals(id)).isPresent()) {
+                throw new RuntimeException("CPF já cadastrado em outro cliente!");
+            }
+        }
+
         clienteExistente.setNome(clienteAtualizado.getNome());
         clienteExistente.setCpf(clienteAtualizado.getCpf());
         clienteExistente.setDataNascimento(clienteAtualizado.getDataNascimento());
         clienteExistente.setEndereco(clienteAtualizado.getEndereco());
 
         if (clienteAtualizado.getContatos() != null) {
-            for (int i = 0; i < clienteAtualizado.getContatos().size(); i++) {
-                Contato novoContato = clienteAtualizado.getContatos().get(i);
-
+            for (Contato novoContato : clienteAtualizado.getContatos()) {
                 if (novoContato.getId() != null) {
                     Contato contatoExistente = contatoRepository.findById(novoContato.getId())
                             .orElseThrow(() -> new RuntimeException("Contato não encontrado!"));

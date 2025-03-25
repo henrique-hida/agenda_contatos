@@ -55,11 +55,11 @@ frontend/
 ### 1. Configuração do Banco de Dados
 Certifique-se de ter o **PostgreSQL** instalado e crie um banco de dados:
 ```sql
-CREATE DATABASE agenda ;
+CREATE DATABASE agenda;
 ```
 Para popular o banco com dados iniciais, execute o script `scripts/init.sql`:
 ```sql
-psql -U seu_usuario -d agenda -f scripts/init.sql ;
+psql -U seu_usuario -d agenda -f scripts/init.sql;
 ```
 
 ### 2. Executando o Backend

@@ -117,8 +117,11 @@ const ClienteForm = () => {
                 navigate(`/clientes/info/${response.data.id}`, { state: { cliente: response.data } });
             })
             .catch(error => {
-                if (error.response && error.response.data && error.response.data.message.includes('CPF já cadastrado')) {
-                    alert('Este CPF já está cadastrado.');
+                if (error.response && error.response.data) {
+                    const errorMessage = error.response.data.message || 
+                                    error.response.data.error || 
+                                    "Erro ao cadastrar ou editar cliente";
+                alert(errorMessage);
                 } else {
                     alert('Erro ao cadastrar ou editar cliente.');
                 }
